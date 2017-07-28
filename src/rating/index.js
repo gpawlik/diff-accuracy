@@ -1,4 +1,4 @@
-const calculateRating = diff => {
+const calculateResult = diff => {
   const report = {
     removedCount: 0,
     addedCount: 0,
@@ -33,13 +33,13 @@ const calculateAccuracy = ({ removedCount, unchangedCount }) => {
 }
 
 const getReport = diff => {
-  const rating = calculateRating(diff);
-  const accuracy = calculateAccuracy(rating);
+  const result = calculateResult(diff);
+  const accuracy = calculateAccuracy(result);
 
   console.log('Accuracy:', accuracy);
 
   return {
-    rating,
+    result,
     accuracy
   }
 }
